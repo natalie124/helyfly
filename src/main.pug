@@ -1,0 +1,13 @@
+extends pug/layout
+
+block variables
+  // title  страницы
+  -let title = "Эксклюзивная фотосессия при полете на вертолете";
+  // фото в галереи
+  -let photos = ["photo-1", "photo-2", "photo-3", "photo-4", "photo-3", "photo-4", "photo-2", "photo-1", "photo-4", "photo-3", "photo-4", "photo-2", "photo-3", "photo-2", "photo-1", "photo-2", "photo-3", "photo-4", "photo-3", "photo-4", "photo-2", "photo-1"];
+
+block content
+  include components/promo/promo
+  include components/advantages/advantages
+  include components/gallery/gallery
+  include components/organizer/organizer

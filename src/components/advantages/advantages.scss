@@ -1,0 +1,108 @@
+.advantages {
+  width: 100%;
+  margin-bottom: 30px;
+
+  /*h3 {
+    max-width: 286px;
+    width: 100%;
+
+    @include font-main(20px, 29px, 500, $font-black);
+  }
+
+  h4 {
+    max-width: 286px;
+    width: 100%;
+
+    @include font-main(18px, 26px, 500, $font-black);
+  }*/
+
+/*
+  a {
+    color: $font-blue;
+    text-decoration: none;
+
+    transition-property: color, opacity;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }*/
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__description {
+    position: relative;
+
+    width: 100%;
+    padding-right: 52%;
+  }
+
+  &__title {
+
+    max-width: 286px;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 0;
+
+    @include font-main(40px, 49px, 500, $font-black);
+  }
+
+  &__text {
+    max-width: 100%;
+    margin: 0 0 21px;
+    padding: 0;
+
+    @include font-main(18px, 26px, 400, $font-black);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0 0 40px;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+
+      margin: 0 0 16px;
+
+      @include font-main(14px, 20px, 500, $font-black);
+
+      span.img {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 48.597%;
+  }
+}

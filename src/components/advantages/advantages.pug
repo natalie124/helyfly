@@ -1,0 +1,31 @@
+section.advantages
+  .advantages__wrapper.container
+
+    .advantages__description
+      h2.advantages__title Фотосессия в вертолете
+
+      .advantages__video
+        .video-yt(data-youtube="UALhvLWsdZE")
+          button.video-yt__btn(type="button", title="Смотреть видео")
+            +img-jpg("video-poster", 554, 374, "Фотосессия в вертолете")
+
+      p.advantages__text Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
+      ul.advantages__list
+        li
+          span.img
+            +img-svg("clock", 40, 37, "3 часа съемки")
+          | 3 часа съемки
+        li
+          span.img
+            +img-svg("camera", 35, 28, "Более 50 фотографий")
+          | Более 50 фотографий
+        li
+          span.img
+            +img-svg("location", 33, 33, "Москва")
+          | Москва
+        li
+          span.img
+            +img-svg("message", 31, 31, "Готовы ответить на любые вопросы")
+          | Готовы ответить на любые вопросы
+
+      include ../blocks/raiting

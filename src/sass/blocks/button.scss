@@ -1,0 +1,117 @@
+.button {
+  margin: 0;
+  padding: 16px 32px;
+
+  @include font-main(14px, 17px, 500, $orange);
+  text-decoration: none;
+
+  background-color: $white;
+  border: 2px solid $orange;
+  border-radius: 3px;
+
+  transition-property: color, border-color, background-color, opacity;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    background-color: $orange;
+
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--big {
+    padding: 23px 37px;
+    font-weight: 900;
+  }
+
+  &--white {
+    color: $white;
+
+    background-color: transparent;
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+
+      background-color: $white;
+      border-color: $orange;
+    }
+  }
+}
+
+.button-more {
+  position: relative;
+
+  margin: 0 0 27px;
+  padding: 0 22px 0 0;
+
+  @include font-main(16px, 23px, 500, $font-blue);
+
+  border: none;
+  background-color: transparent;
+
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+  outline: none;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    top: 5px;
+
+    width: 10px;
+    height: 10px;
+
+    background-color: transparent;
+    border-right: 2px solid $grey;
+    border-top: 2px solid $grey;
+
+    transition-property: border-color, transform;
+    transition-duration: 0.3s;
+
+    transform: rotate(135deg);
+    content: "";
+  }
+
+  &--double-arrow {
+    padding-left: 22px;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 5px;
+
+      width: 9px;
+      height: 9px;
+
+      background-color: transparent;
+      border-right: 2px solid $grey;
+      border-top: 2px solid $grey;
+
+      transition-property: border-color, transform;
+      transition-duration: 0.3s;
+
+      transform: rotate(135deg);
+      content: "";
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $orange;
+
+    &::before,
+    &::after {
+      border-color: $orange;
+    }
+  }
+}

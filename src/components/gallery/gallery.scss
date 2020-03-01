@@ -1,0 +1,45 @@
+.gallery {
+  width: 100%;
+
+  &__wrapper {
+    margin-bottom: 37px;
+
+    border-bottom: 0.5px solid $grey;
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 32px;
+    padding: 0;
+
+    @include font-main(20px, 29px, 500, $font-black);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin: 0 -5px 40px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    width: 25%;
+    padding: 5px;
+    margin: 0;
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: 0 27px;
+  }
+}

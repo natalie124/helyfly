@@ -1,0 +1,9 @@
+mixin svg( name, width, height )
+  svg( width=("" + width) height=("" + height) aria-hidden="true" )
+    use( xlink:href=("img/sprite.svg#" + name) )
+
+mixin img-svg( name, width, height, alt )
+  img( src="img/" + name + ".svg" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin img-jpg( name, width, height, alt )
+  img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )

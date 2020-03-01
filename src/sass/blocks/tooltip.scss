@@ -1,0 +1,71 @@
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-bottom: 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 11px 23px;
+
+    background-color: $orange;
+    border-radius: 5px;
+  }
+
+  &__title {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0 7px 0 0;
+    padding: 0;
+
+    @include font-main(20px, 43px, 400, $white);
+
+  }
+
+  &__price {
+    @include font-main(35px, 43px, 800, $white);
+  }
+
+  &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 52px;
+    min-height: 52px;
+
+    @include font-main(35px, 43px, 800, $white);
+
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 50%;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: $orange;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 7px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+
+    content: "";
+  }
+}

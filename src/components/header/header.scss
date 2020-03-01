@@ -1,0 +1,67 @@
+.header {
+  width: 100%;
+  padding: 38px 0;
+
+  background-color: $white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin-right: 36px;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    svg {
+      fill: $font-black;
+
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+
+      svg {
+        fill: $orange;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__phone {
+    @include font-main(14px, 17px, 400, $font-grey);
+
+    a {
+      text-decoration: none;
+      color: $font-black;
+
+      transition-property: opacity, color;
+      transition-duration: 0.3s;
+
+      &:hover,
+      &:focus {
+        color: $orange;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+$(document).ready(function() {
+// показывает / скрывает элементы
+  $('.js-show-container').each(function() {
+    var btn = $(this).find('.js-show-btn'),    // кнопка показать еще
+        text = btn.text(),                     // текст кнопки
+        dataText = btn.attr('data-text'),      // текст после активации
+        data = btn.attr('data-count'),         // количество видимых блоков
+        items = $(this).find('.js-show-item'), // все блоки
+        dots = $(this).find('.js-dots');       // точки в конце видимого текста
+
+    items.each(function(index, el) {
+      // скрывает все блоки кроме количества в атрибуте data-count
+      if (index >= data) {
+        el.classList.add('js-hide');
+      }
+    });
+
+    btn.click(function() {
+      if (!btn.hasClass('js-show-btn-active')) {
+        // показывает все блоки после клика на кнопку и меняет текст кнопки на текст в атрибуте data-text
+        btn.addClass('js-show-btn-active');
+        dots.addClass('js-hide');
+        btn.text(dataText);
+
+        items.each(function(index, el) {
+          el.classList.remove('js-hide');
+        });
+      } else {
+        // скрывает все блоки кроме количества в атрибуте data-count и меняте текст кнопки на дефолтный
+        btn.removeClass('js-show-btn-active');
+        dots.removeClass('js-hide');
+        btn.text(text);
+
+        items.each(function(index, el) {
+          if (index >= data) {
+            el.classList.add('js-hide');
+          }
+        });
+      }
+    });
+  });
+});

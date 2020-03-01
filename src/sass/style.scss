@@ -1,0 +1,18 @@
+@import "vendor/normalize";
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/global";
+// Блоки
+@import "blocks/button";
+@import "blocks/tooltip";
+@import "blocks/video";
+@import "../components/blocks/raiting";
+
+// Компоненты
+@import "../components/header/header";
+@import "../components/promo/promo";
+@import "../components/advantages/advantages";
+@import "../components/gallery/gallery";
+@import "../components/organizer/organizer";
+@import "global/js";
