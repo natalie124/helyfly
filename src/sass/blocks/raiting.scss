@@ -4,10 +4,6 @@
   align-items: center;
 
   width: 100%;
-  padding: 20px 0 31px;
-
-  border-top: 0.5px solid $grey;
-  border-bottom: 0.5px solid $grey;
 
   img {
     display: block;
@@ -17,7 +13,7 @@
     margin-right: 10px;
   }
 
-  p {
+  &__text {
     margin: 3px 14px 0 0;
     padding: 0;
   }
@@ -38,5 +34,31 @@
       margin: 0 3.5px;
     }
   }
-}
 
+  &__check {
+    position: relative;
+
+    margin: 0 0 0 45px;
+    padding: 0 0 0 25px;
+
+    @include font-main(14px, 21px, 400, $font-grey);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-color: transparent;
+
+      width: 18px;
+      height: 11.5px;
+
+      border-left: 2.5px solid #6aad4a;
+      border-bottom: 2.5px solid #6aad4a;
+
+      transform: rotate(-45deg);
+
+      content: "";
+    }
+  }
+}

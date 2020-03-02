@@ -1,0 +1,35 @@
+section.coordinates
+  h3.visually-hidden Информация о встрече:
+  .coordinates__map
+    +img-png("map", 1916, 509, "Карта")
+    script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abc7a17500845c4024c907ceb68b4b03c4db21253345856ba87d05fe7ff12bd2c&amp;scroll=true")
+  .container
+    .coordinates__info
+      ul.coordinates__list
+
+        li.coordinates__item
+          span.coordinates__icon 1
+          p.coordinates__text
+            span Где встречаемся?
+            span Москва
+
+        li.coordinates__item
+          span.coordinates__icon 2
+          p.coordinates__text
+            span Время съемки
+            span 3 часа
+
+          li.coordinates__item
+            span.coordinates__icon 3
+            p.coordinates__text
+              span Мест осталось:
+              span 2 места
+
+      .coordinates__item
+        .coordinates__icon.coordinates__icon--photo
+          +img-jpg("profile-1", 67, 67, "Мария Иванова")
+
+        p.coordinates__text.coordinates__text--profile
+          span Мария Иванова
+          span фотограф
+          a(href="#") Показать больше информации

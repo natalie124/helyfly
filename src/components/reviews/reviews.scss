@@ -1,0 +1,95 @@
+.reviews {
+  width: 100%;
+
+  &__main-title {
+    width: 100%;
+    margin: 0 0 50px;
+    padding: 0;
+
+    @include font-main(20px, 29px, 500, $font-main);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0 0 28px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+  }
+
+  &__photo {
+    position: relative;
+
+    width: 101px;
+    height: 101px;
+    margin-right: 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+  }
+
+  &__info {
+    max-width: 510px;
+    width: 100%;
+
+    border-bottom: 0.5px solid $grey;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    padding: 0;
+
+    @include font-main(18px, 22px, 500, $font-black);
+  }
+
+  &__category {
+    margin: 0 0 10px;
+    padding: 0;
+
+    @include font-main(14px, 21px, 400, $font-black);
+  }
+
+  &__raiting {
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    margin: 0 0 22px;
+    padding: 0;
+
+    @include font-main(16px, 24px, 400, $font-black);
+  }
+
+  &__date {
+    display: inline-block;
+    vertical-align: middle;
+
+    margin-bottom: 35px;
+
+    @include font-main(14px, 21px, 400, $font-grey);
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: 0 0 47px;
+  }
+}

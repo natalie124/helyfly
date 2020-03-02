@@ -12,13 +12,13 @@
   transition-property: color, border-color, background-color, opacity;
   transition-duration: 0.3s;
 
+  cursor: pointer;
+
   &:hover,
   &:focus {
     color: $white;
 
     background-color: $orange;
-
-    cursor: pointer;
   }
 
   &:active {
@@ -43,6 +43,32 @@
       background-color: $white;
       border-color: $orange;
     }
+  }
+
+  &--orange {
+    padding: 27px 128px 25px;
+
+    @include font-main(16px, 20px, 600, $white);
+
+    background-color: $orange;
+    border: 3px solid $orange;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+
+      background-color: $white;
+    }
+  }
+
+  &:disabled {
+    color: $grey;
+
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+
+    cursor: default;
   }
 }
 
@@ -113,5 +139,9 @@
     &::after {
       border-color: $orange;
     }
+  }
+
+  &:disabled {
+    display: none;
   }
 }

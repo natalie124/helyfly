@@ -1,0 +1,24 @@
+section.reviews
+  .reviews__wrapper.container.js-show-container
+    h3.reviews__main-title Отзывы:
+    ul.reviews__list
+      each review in reviews
+        li.reviews__item.js-show-item
+          .reviews__photo
+            +img-jpg("" + review.photo, 101, 101, "" + review.title)
+          .reviews__info
+            h4.reviews__title !{review.title}
+            if review.category
+              p.reviews__categoty !{review.category}
+            .reviews__raiting.raiting
+              ul.raiting__stars
+                - for (var x = 0; x < 5; x++)
+                  li
+                    +svg("star", 18, 17)
+              p.raiting__check Супер! Я бы заказала съемку снова!
+
+            p.reviews__text !{review.text}
+            span.reviews__date !{review.date}.
+
+    .reviews__more
+        button.button-more.button-more--double-arrow.js-show-btn(type="button" data-count="3" data-text="Свернуть") Показать все <span class="js-show-all"></span>

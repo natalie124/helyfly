@@ -1,0 +1,79 @@
+.footer {
+  width: 100%;
+
+  &__top {
+    padding: 32.75px 0 33.75px;
+
+    background-color: $white;
+  }
+
+  &__bottom {
+    padding: 3px 0 24px;
+    background-color: #faf9f8;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__logo {
+    margin-top: 17.25px;
+    margin-right: auto;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    svg {
+      fill: $font-black;
+
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $orange;
+      }
+    }
+  }
+
+  &__social {
+    margin-right: 12.75px;
+  }
+
+  &__payment-icons {
+    margin-right: 24.036%;
+  }
+
+  &__info {
+    text-align: center;
+
+    p {
+      margin: 0 0 7px;
+      padding: 0;
+
+      @include font-main(14px, 17px, 400, $font-grey);
+
+      a {
+        @include font-main(14px, 17px, 400, $font-grey);
+        text-decoration: none;
+
+        transition-property: color, opacity;
+        transition-duration: 0.3s;
+
+        &:hover,
+        &:focus {
+          color: $orange;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

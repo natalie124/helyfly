@@ -1,0 +1,94 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  animation: fadein 0.3s ease-out;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-scrolling: touch;
+
+  &__wrapper {
+    position: relative;
+
+    max-width: 615px;
+    width: 100%;
+    margin: auto 0;
+    padding: 62px 96px 31px;
+
+    background-color: transparent;
+    background-color: $white;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin: 0 0 31px;
+    padding: 0;
+
+    @include font-main(22px, 33px, 600, $font-black);
+    text-align: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 10px;
+
+    background-color: transparent;
+    border: none;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      fill: $font-grey;
+
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $orange;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__submit {
+    margin: 0 auto 30px;
+  }
+}

@@ -1,0 +1,37 @@
+footer.footer
+    .footer__top
+      .footer__wrapper.container
+        a.footer__logo(href="main.html" title="Helyfly")
+          +svg("logo", 129, 23)
+
+        .footer__social.social
+          ul.social__list
+            li.social__item
+              a.social__link(href="#")
+                +img-svg("vk", 25.5, 15.18, alt="Вконтакте")
+            li.social__item
+              a.social__link(href="#")
+                +img-svg("facebook", 25.49, 25.49, alt="Facebook")
+            li.social__item
+              a.social__link(href="#")
+                +img-svg("instagram", 25.49, 25.5, alt="Instagram")
+
+        .footer__lang
+          form
+            .select-item
+              label.visually-hidden(for="lang") Выберете язык
+              select(id="lang")
+                option(value="ru") RU
+                option(value="en") EN
+
+    .footer__bottom
+      .footer__wrapper.container
+        .footer__payment-icons.payment-icons
+          ul.payment-icons__list
+            li.payment-icons__icon
+              +img-svg("mc", 39, 25, alt="MasterCard")
+            i.payment-icons__icon
+              +img-svg("visa", 39, 27, alt="Visa")
+        .footer__info
+          p.techsupport Тех. поддержка:  <a href="tel:88007000000">8(800)700-00-00</a>
+          p.copyright © 2018 HELYFLY. All Rights Reserved.

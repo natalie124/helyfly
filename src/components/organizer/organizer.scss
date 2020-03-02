@@ -1,2 +1,42 @@
 .organizer {
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    max-width: 584px;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0 0 14px;
+    padding: 0;
+
+    @include font-main(18px, 26px, 500, $font-black);
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    padding: 0;
+
+    @include font-main(16px, 24px, 400, $font-black);
+  }
+
+  &__more {
+    position: relative;
+    top: -15px;
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 2;
+  }
 }

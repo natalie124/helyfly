@@ -4,7 +4,6 @@
 }
 
 .js-show-btn-active {
-
   &::before,
   &::after {
     top: 10px;
@@ -16,14 +15,4 @@
   opacity: 1;
 
   animation: fadein 0.6s ease-out;
-}
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }

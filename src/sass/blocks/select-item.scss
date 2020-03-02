@@ -1,0 +1,53 @@
+.select-item {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  min-width: 40px;
+  min-height: 40px;
+
+  &::after {
+    position: absolute;
+    right: 8px;
+    top: calc(50% - 8px;);
+
+    width: 10px;
+    height: 10px;
+
+    background-color: transparent;
+    border-right: 2px solid $grey;
+    border-top: 2px solid $grey;
+
+    transition-property: border-color, transform;
+    transition-duration: 0.3s;
+
+    transform: rotate(135deg);
+    content: "";
+  }
+
+  select {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    min-height: 40px;
+    padding-right: 25px;
+    padding-left: 10px;
+
+    @include font-main(15px, 18px, 400, $font-black) border: none;
+
+    background-color: transparent;
+
+    appearance: none;
+    cursor: pointer;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $orange;
+    }
+  }
+}

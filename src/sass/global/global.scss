@@ -15,9 +15,13 @@ body {
 }
 
 img {
+  display: block;
+  vertical-align: top;
+
   max-width: 100%;
   max-height: 100%;
-  height: auto;
+
+  object-fit: cover;
 }
 
 .visually-hidden,
@@ -43,4 +47,12 @@ img {
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.scroll-hidden {
+  overflow-y: hidden;
+}
+
+.scroll-hidden.scrollbar {
+  padding-right: 15px;
 }

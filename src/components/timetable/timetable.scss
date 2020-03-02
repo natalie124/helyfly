@@ -1,0 +1,132 @@
+.timetable {
+  margin-bottom: 82px;
+
+  &__table {
+    max-width: 770px;
+    width: 100%;
+    padding: 0;
+
+    border: 1px solid $grey;
+
+    border-collapse: collapse;
+    table-layout: fixed;
+
+    caption {
+      text-align: left;
+
+      max-width: 284px;
+      width: 100%;
+    }
+
+    td,
+    th {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px;
+    padding: 0;
+
+    @include font-main(20px, 29px, 500, $font-black);
+  }
+
+  &__date {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    padding-top: 24px;
+    padding-bottom: 15px;
+
+    p {
+      margin: 0 14px 5px 0;
+      padding: 0;
+
+      @include font-main(18px, 26px, 400, $font-black);
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: transparent;
+    border: 0.5px solid #c4c4c4;
+    border-radius: 3px;
+
+    transition-property: border-color, background-color, opacity;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-color: $orange;
+      background-color: orange;
+
+      svg {
+        fill: $white;
+      }
+    }
+
+    &:active {
+
+
+      opacity: 0.3;
+    }
+
+    svg {
+      fill: #83888A;
+
+      transition-property: fill;
+      transition-duration: 0.3s;
+    }
+  }
+
+  .timetable__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding-top: 20px;
+
+    border-top: 0.5px solid $grey;
+
+    p {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      margin: 0 20px 10px 0;
+      padding: 0;
+
+      @include font-main(18px, 26px, 400, $font-black);
+
+      span {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__price {
+    @include font-main(18px, 22px, 600, $font-black);
+  }
+
+  &__raiting {
+     padding: 20px 0 31px;
+  }
+}

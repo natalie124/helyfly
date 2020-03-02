@@ -2,37 +2,6 @@
   width: 100%;
   margin-bottom: 30px;
 
-  /*h3 {
-    max-width: 286px;
-    width: 100%;
-
-    @include font-main(20px, 29px, 500, $font-black);
-  }
-
-  h4 {
-    max-width: 286px;
-    width: 100%;
-
-    @include font-main(18px, 26px, 500, $font-black);
-  }*/
-
-/*
-  a {
-    color: $font-blue;
-    text-decoration: none;
-
-    transition-property: color, opacity;
-
-    &:hover,
-    &:focus {
-      color: $orange;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }*/
-
   &__wrapper {
     display: flex;
     justify-content: flex-start;
@@ -104,5 +73,12 @@
     right: 0;
 
     width: 48.597%;
+  }
+
+  &__raiting {
+    padding: 20px 0 31px;
+
+    border-top: 0.5px solid $grey;
+    border-bottom: 0.5px solid $grey;
   }
 }

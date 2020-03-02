@@ -40,7 +40,7 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('images', function () {
+gulp.task('images', function() {
   return gulp.src([
       'src/img/**/*.{png,jpg,svg}',
       '!src/img/sprite/*.svg'
@@ -69,13 +69,13 @@ gulp.task('images', function () {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('webp', function () {
+gulp.task('webp', function() {
   return gulp.src('build/img/**/*.{png,jpg}')
-    .pipe(webp({quality: 90}))
+    .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest('build/img/webp'));
 });
 
- gulp.task('sprite', function() {
+gulp.task('sprite', function() {
   return gulp.src('src/img/sprite/*.svg')
     .pipe(newer('build/img'))
     .pipe(imagemin([
@@ -92,7 +92,7 @@ gulp.task('webp', function () {
     .pipe(gulp.dest('build/img'));
 });
 
-gulp.task('style', function () {
+gulp.task('style', function() {
   return gulp.src('src/sass/style.scss')
     .pipe(plumber())
     .pipe(sass({
@@ -111,14 +111,14 @@ gulp.task('style', function () {
 
 gulp.task('scripts:vendor', function() {
   return gulp.src('src/js/vendor/**/*.js')
-  .pipe(plumber())
-  .pipe(concat('vendor.js'))
-  .pipe(gulp.dest('build/js'))
-  .pipe(uglify())
-  .pipe(rename({
-    suffix: '.min'
-  }))
-  .pipe(gulp.dest('build/js'));
+    .pipe(plumber())
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('build/js'));
 });
 
 gulp.task('scripts', function() {
@@ -126,17 +126,17 @@ gulp.task('scripts', function() {
       'src/js/global/**/*.js',
       'src/components/**/*.js'
     ])
-  .pipe(plumber())
-  .pipe(concat('script.js'))
-  .pipe(gulp.dest('build/js'))
-  .pipe(uglify())
-  .pipe(rename({
-    suffix: '.min'
-  }))
-  .pipe(gulp.dest('build/js'));
+    .pipe(plumber())
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('build/js'))
+    .pipe(uglify())
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('html', function () {
+gulp.task('html', function() {
   return gulp.src('src/*.pug')
     .pipe(plumber())
     .pipe(pug())
@@ -147,7 +147,7 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
-gulp.task('refresh', function (done) {
+gulp.task('refresh', function(done) {
   server.reload();
   done();
 });
@@ -175,7 +175,7 @@ gulp.task('build:minify', gulp.series(
   'html'
 ));
 
-gulp.task('serve', function () {
+gulp.task('serve', function() {
   server.init({
     server: 'build/',
     notify: false,
