@@ -6,6 +6,10 @@
   padding: 20px 0 10px;
   margin-bottom: 7%;
 
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
+
   &__map {
     position: absolute;
     top: 0;
@@ -13,6 +17,13 @@
 
     width: 100%;
     height: 100%;
+
+    @media (max-width: $mobile) {
+      position: relative;
+
+      min-height: 423px;
+      margin-bottom: 52px;
+    }
 
     img {
       position: absolute;
@@ -52,6 +63,11 @@
       max-width: 370px;
       padding: 30px 15px 5px;
     }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      padding: 52px 30px 0;
+    }
   }
 
   &__list {
@@ -72,6 +88,30 @@
     @media (max-width: $laptop) {
       margin-bottom: 25px;
     }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+
+      margin-bottom: 40px;
+
+      &--profile {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .coordinates__text {
+          align-items: flex-start;
+          flex-grow: 2;
+
+          width: 100%;
+          max-width: 135px;
+        }
+      }
+    }
   }
 
   &__icon {
@@ -88,6 +128,15 @@
     background-color: $orange;
     border-radius: 50%;
 
+    @media (max-width: $mobile) {
+      width: 66px;
+      height: 66px;
+      margin: 0 auto 20px;
+
+      font-size: 30px;
+      line-height: 44px;
+    }
+
     &--photo {
       position: relative;
 
@@ -96,6 +145,10 @@
       margin-right: 10px;
 
       overflow: hidden;
+
+      @media (max-width: $laptop) {
+        margin: 0 10px 0 0;
+      }
     }
   }
 
@@ -116,11 +169,23 @@
       max-width: 250px;
     }
 
+    @media (max-width: $mobile) {
+      justify-content: flex-start;
+      align-items: center;
+
+      max-width: 100%;
+    }
+
     span:not(.coordinates__profile-category) {
       margin-bottom: 5px;
 
       &:first-child {
         @include font-main(18px, 27px, 500, $font-black);
+
+        @media (max-width: $mobile) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
 
       &:last-child {

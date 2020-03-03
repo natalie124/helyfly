@@ -50,6 +50,10 @@
     transition-property: color;
     transition-duration: 0.3s;
 
+    @media(max-width: $mobile) {
+      font-size: 16px;
+    }
+
     &:hover,
     &:focus {
       color: $orange;

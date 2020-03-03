@@ -7,6 +7,10 @@
     padding: 3% 5% 0;
   }
 
+  @media (max-width: $mobile) {
+    padding: 9px 31px 0;
+  }
+
   &__media {
     position: relative;
 

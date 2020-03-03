@@ -35,6 +35,14 @@
     @media (max-width: $laptop) {
       font-size: 16px;
       line-height: 20px;
+
+      border-width: 3px;
+      border-radius: 7px;
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25), 0px 4px 70px rgba(255, 255, 255, 0.7);
+    }
+
+    @media (max-width: $mobile) {
+      padding: 21px 33px;
     }
   }
 
@@ -61,6 +69,13 @@
     background-color: $orange;
     border: 3px solid $orange;
     border-radius: 3px;
+
+    @media (max-width: $mobile) {
+      padding: 16px 68px;
+
+      font-size: 14px;
+      line-height: 17px;
+    }
 
     &:hover,
     &:focus {

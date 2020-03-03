@@ -8,6 +8,10 @@
 
   background-color: $promo-background;
 
+  @media (max-width: $laptop) {
+    margin-bottom: 39px;
+  }
+
   &__poster {
     position: absolute;
     top: 0;
@@ -57,10 +61,17 @@
     @include font-main(40px, 49px, 700, $white);
 
     @media (max-width: $laptop) {
+      margin-bottom: 25px;
+
       font-size: 35px;
       line-height: 40px;
+    }
 
-      margin-bottom: 25px;
+    @media (max-width: $mobile) {
+      margin-bottom: 36px;
+
+      font-size: 32px;
+      line-height: 39px;
     }
 
     b {

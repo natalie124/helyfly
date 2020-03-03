@@ -13,16 +13,32 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
+    width: 129px;
+    height: 23px;
     margin-right: 36px;
     margin-top: 6px;
 
     transition-property: opacity;
     transition-duration: 0.3s;
 
+    @media (max-width: $mobile) {
+      width: 84px;
+      height: 15.5px;
+      margin-right: 20px;
+      margin-top: 0;
+    }
+
     svg {
+      width: 100%;
+      height: 100%;
+
       fill: $font-black;
 
       transition-property: fill;

@@ -1,6 +1,13 @@
 .gallery {
   width: 100%;
 
+  @media (max-width: $mobile) {
+    .container {
+      padding-right: 0;
+      padding-left: 7.5px;
+    }
+  }
+
   &__wrapper {
     margin-bottom: 35px;
 
@@ -8,6 +15,14 @@
 
     @media (max-width: $laptop) {
       margin-bottom: 10px;
+    }
+
+    @media (max-width: $mobile) {
+      border: none;
+
+      .js-hide {
+        display: block;
+      }
     }
   }
 
@@ -17,6 +32,15 @@
     padding: 0;
 
     @include font-main(20px, 29px, 500, $font-black);
+
+    @media (max-width: $mobile) {
+      font-size: 28px;
+      line-height: 34px;
+      text-align: center;
+
+      margin-bottom: 32px;
+      padding-right: 15px;
+    }
   }
 
   &__list {
@@ -29,12 +53,32 @@
     padding: 0;
 
     list-style: none;
+
+    @media (max-width: $mobile) {
+      position: relative;
+
+      flex-wrap: nowrap;
+
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 41px;
+
+      overflow-x: auto;
+    }
   }
 
   &__item {
     width: 25%;
     padding: 5px;
     margin: 0;
+
+    @media (max-width: $mobile) {
+      min-width: 284.5px;
+      width: 284.5px;
+
+      padding: 0 7.5px;
+    }
   }
 
   &__img {
@@ -64,5 +108,9 @@
     width: 100%;
     margin: 0 27px;
     padding-right: 6%;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
