@@ -130,11 +130,10 @@
 }
 
 .input-check {
+  position: relative;
   margin: 24px 0;
 
   label {
-    position: relative;
-
     display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -187,6 +186,19 @@
 
       content: "";
     }
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    z-index: -1;
+
+    width: 16px;
+    height: 16px;
+
+    opacity: 0;
+    cursor: default;
   }
 
   input:checked+label::after {

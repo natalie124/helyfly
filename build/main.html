@@ -980,20 +980,20 @@
         <form action="#" method="post" name="booking">
           <div class="input-item input-item--icon"><button type="button"><svg width="27" height="27" aria-hidden="true">
                 <use xlink:href="img/sprite.svg#calendar"></use>
-              </svg></button><label for="booking-date">Дата<span>*</span></label><input id="booking-date" name="date" type="text" value="2019-04-14" minlength="7" required></div>
+              </svg></button><label for="booking-date">Дата<span>*</span></label><input id="booking-date" name="date" type="text" placeholder="14.09.2019" value="14.09.2019" minlength="6" required></div>
           <div class="input-item"><label for="booking-email">Email<span>*</span></label><input id="booking-email" name="email" type="email" placeholder="Электронная почта" required></div>
-          <div class="input-item"><label for="booking-name">Имя<span>*</span></label><input id="booking-name" name="name" type="text" value="Иван" required></div>
-          <div class="input-item"><label for="booking-surname">Фамилия<span>*</span></label><input id="booking-surname" name="surname" type="text" value="Громов" required></div>
+          <div class="input-item"><label for="booking-name">Имя<span>*</span></label><input id="booking-name" name="name" type="text" placeholder="Иван" required></div>
+          <div class="input-item"><label for="booking-surname">Фамилия<span>*</span></label><input id="booking-surname" name="surname" type="text" placeholder="Громов" required></div>
           <div class="input-item"><label for="booking-tel">Телефон<span>*</span></label><input id="booking-tel" name="tel" type="text" placeholder="+7 (905) 184 81 40" required></div>
           <div class="input-item input-card">
             <h3 class="input-item__title">Данные карты<span>*</span></h3>
             <div class="input-card__container">
-              <div class="input-card__item input-card__item--number"><label class="visually-hidden" for="booking-card-number">Номер карты</label><input id="booking-card-number" name="card-number" type="text" placeholder="Номер карты" required minlength="15" maxlength="19"></div>
+              <div class="input-card__item input-card__item--number"><label class="visually-hidden" for="booking-card-number">Номер карты</label><input id="booking-card-number" name="card-number" type="text" placeholder="Номер карты" required minlength="16" maxlength="16"></div>
               <div class="input-card__item input-card__item--date"><label class="visually-hidden" for="booking-card-date">Срок действия</label><input id="booking-card-date" name="card-date" type="text" placeholder="Срок действия" required minlength="4"></div>
               <div class="input-card__item"><label class="visually-hidden" for="booking-card-code">CVV</label><input id="booking-card-code" name="card-code" type="text" placeholder="CVV" required minlength="3" maxlength="3"></div>
             </div>
           </div>
-          <div class="input-check"><input type="checkbox" checked required id="booking-consent" name="consent"><label for="booking-consent">Я согласен с пользовательским соглашением и публичной офертой</label></div><button class="modal__submit button button--orange" type="submit">Забронировать</button>
+          <div class="input-check"><input type="checkbox" checked required id="booking-consent" name="consent" tabindex="-1"><label for="booking-consent">Я согласен с пользовательским соглашением и публичной офертой</label></div><button class="modal__submit button button--orange" type="submit">Забронировать</button>
         </form>
       </div>
     </div>

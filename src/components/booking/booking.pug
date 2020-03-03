@@ -9,16 +9,16 @@
           button(type="button")
             +svg("calendar", 27, 27)
           label(for="booking-date") Дата<span>*</span>
-          input(id="booking-date" name="date" type="text" value="2019-04-14" minlength="7" required)
+          input(id="booking-date" name="date" type="text" placeholder="14.09.2019" value="14.09.2019" minlength="6" required)
         .input-item
           label(for="booking-email") Email<span>*</span>
           input(id="booking-email" name="email" type="email" placeholder="Электронная почта" required)
         .input-item
           label(for="booking-name") Имя<span>*</span>
-          input(id="booking-name" name="name" type="text" value="Иван" required)
+          input(id="booking-name" name="name" type="text" placeholder="Иван" required)
         .input-item
           label(for="booking-surname") Фамилия<span>*</span>
-          input(id="booking-surname" name="surname" type="text" value="Громов" required)
+          input(id="booking-surname" name="surname" type="text" placeholder="Громов" required)
         .input-item
           label(for="booking-tel") Телефон<span>*</span>
           input(id="booking-tel" name="tel" type="text" placeholder="+7 (905) 184 81 40" required)
@@ -28,7 +28,7 @@
           .input-card__container
             .input-card__item.input-card__item--number
               label.visually-hidden(for="booking-card-number") Номер карты
-              input(id="booking-card-number" name="card-number" type="text" placeholder="Номер карты" required minlength="15" maxlength="19")
+              input(id="booking-card-number" name="card-number" type="text" placeholder="Номер карты" required minlength="16" maxlength="16")
             .input-card__item.input-card__item--date
               label.visually-hidden(for="booking-card-date") Срок действия
               input(id="booking-card-date" name="card-date" type="text" placeholder="Срок действия" required minlength="4")
@@ -37,7 +37,7 @@
               input(id="booking-card-code" name="card-code" type="text" placeholder="CVV" required minlength="3" maxlength="3")
 
         .input-check
-          input(type="checkbox" checked required id="booking-consent" name="consent")
+          input(type="checkbox" checked required id="booking-consent" name="consent" tabindex="-1")
           label(for="booking-consent") Я согласен с пользовательским соглашением и публичной офертой
 
         button.modal__submit.button.button--orange(type="submit") Забронировать

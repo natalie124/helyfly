@@ -24,9 +24,7 @@ img {
   object-fit: cover;
 }
 
-.visually-hidden,
-.form input[type="checkbox"],
-.form input[type="radio"] {
+.visually-hidden {
   position: absolute;
 
   width: 1px;

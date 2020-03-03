@@ -462,9 +462,7 @@ img {
      object-fit: cover;
 }
 
-.visually-hidden,
-.form input[type="checkbox"],
-.form input[type="radio"] {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -865,11 +863,11 @@ img {
 }
 
 .input-check {
+  position: relative;
   margin: 24px 0;
 }
 
 .input-check label {
-  position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -924,6 +922,17 @@ img {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   content: "";
+}
+
+.input-check input {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  z-index: -1;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  cursor: default;
 }
 
 .input-check input:checked + label::after {
