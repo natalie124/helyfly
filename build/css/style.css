@@ -754,7 +754,6 @@ img {
           animation: fadein 0.3s ease-out;
   overflow-x: hidden;
   overflow-y: auto;
-  overflow-scrolling: touch;
 }
 
 .modal__wrapper {
