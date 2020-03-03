@@ -1,6 +1,11 @@
 .profile {
   width: 290px;
-  padding: 0 35px;
+  max-width: 100%;
+  padding: 3% 6% 0;
+
+  @media (max-width: $laptop) {
+    padding: 3% 5% 0;
+  }
 
   &__media {
     position: relative;
@@ -11,6 +16,7 @@
     align-items: center;
 
     margin-bottom: 23px;
+    padding-top: 18px;
   }
 
   &__photo {
@@ -28,7 +34,7 @@
   &__icon {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 100%;
 
     display: flex;
     justify-content: center;
@@ -53,7 +59,7 @@
   }
 
   &__category {
-    margin: 0 0 11px;
+    margin: 0 0 7px;
     padding: 0;
 
     @include font-main(14px, 21px, 400, $font-black);
@@ -67,6 +73,7 @@
 
     @include font-main(14px, 21px, 400, $font-blue);
     text-decoration: none;
+    text-align: center;
 
     transition-property: color, opacity;
     transition-duration: 0.3s;

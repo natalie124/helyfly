@@ -3,10 +3,10 @@
 
   &__main-title {
     width: 100%;
-    margin: 0 0 50px;
+    margin: 0 0 47px;
     padding: 0;
 
-    @include font-main(20px, 29px, 500, $font-main);
+    @include font-main(20px, 29px, 500, $font-black);
   }
 
   &__list {
@@ -15,7 +15,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin: 0 0 28px;
+    margin: 0 0 5px;
     padding: 0;
 
     list-style: none;
@@ -27,7 +27,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   &__photo {
@@ -45,30 +45,31 @@
   &__info {
     max-width: 510px;
     width: 100%;
+    padding-top: 10px;
 
     border-bottom: 0.5px solid $grey;
   }
 
   &__title {
-    margin: 0 0 10px;
+    margin: 0 0 9px;
     padding: 0;
 
     @include font-main(18px, 22px, 500, $font-black);
   }
 
   &__category {
-    margin: 0 0 10px;
+    margin: 0 0 3px;
     padding: 0;
 
     @include font-main(14px, 21px, 400, $font-black);
   }
 
   &__raiting {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   &__text {
-    margin: 0 0 22px;
+    margin: 0 0 15px;
     padding: 0;
 
     @include font-main(16px, 24px, 400, $font-black);
@@ -90,6 +91,6 @@
     flex-wrap: wrap;
 
     width: 100%;
-    margin: 0 0 47px;
+    margin: 0 0 22px;
   }
 }

@@ -1,6 +1,6 @@
 .advantages {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   &__wrapper {
     display: flex;
@@ -13,25 +13,35 @@
     position: relative;
 
     width: 100%;
-    padding-right: 52%;
+    padding-right: 50%;
   }
 
   &__title {
 
     max-width: 286px;
     width: 100%;
-    margin: 0 0 18px;
+    margin: 0 0 9px;
     padding: 0;
 
     @include font-main(40px, 49px, 500, $font-black);
+
+    @media (max-width: $laptop) {
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   &__text {
     max-width: 100%;
-    margin: 0 0 21px;
-    padding: 0;
+    margin: 0 0 15px;
+    padding: 0 3% 0 0;
 
     @include font-main(18px, 26px, 400, $font-black);
+
+    @media (max-width: $laptop) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__list {
@@ -40,7 +50,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin: 0 0 40px;
+    margin: 0 0 21px;
     padding: 0;
 
     list-style: none;
@@ -51,7 +61,7 @@
       align-items: center;
       flex-wrap: wrap;
 
-      margin: 0 0 16px;
+      margin: 0 0 8px;
 
       @include font-main(14px, 20px, 500, $font-black);
 

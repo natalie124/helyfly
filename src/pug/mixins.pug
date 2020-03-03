@@ -10,3 +10,8 @@ mixin img-jpg( name, width, height, alt )
 
 mixin img-png( name, width, height, alt )
   img( src="img/" + name + ".png" srcset="img/" + name + "@2x.png 2x" width=("" + width) height=("" + height) alt="" + alt )
+
+mixin picture-jpg-webp( name, width, height, alt )
+  picture
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name "@2x.webp 2x")
+    img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )

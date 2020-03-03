@@ -10,7 +10,8 @@
   &::after {
     position: absolute;
     right: 8px;
-    top: calc(50% - 8px;);
+    top: calc(50% - 8px;
+    );
 
     width: 10px;
     height: 10px;
@@ -40,6 +41,10 @@
     background-color: transparent;
 
     appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+
     cursor: pointer;
 
     transition-property: color;

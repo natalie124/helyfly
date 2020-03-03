@@ -1,5 +1,5 @@
 'use strict'
-jQuery(function($){
+$(document).ready(function () {
   // маски для текстовых полей в форме
    $("#booking-date").mask("99.99.9999");
    $('#booking-tel').mask('+7 (999) 999-99-99');

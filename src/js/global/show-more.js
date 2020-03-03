@@ -1,5 +1,5 @@
 'use strict'
-$(document).ready(function () {
+$(function() {
 // показывает / скрывает элементы
   $('.js-show-container').each(function () {
     var btn = $(this).find('.js-show-btn'),    // кнопка показать еще

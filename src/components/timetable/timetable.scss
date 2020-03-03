@@ -26,7 +26,7 @@
   }
 
   &__title {
-    margin: 0 0 30px;
+    margin: 0 0 24px;
     padding: 0;
 
     @include font-main(20px, 29px, 500, $font-black);
@@ -38,8 +38,8 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
-    padding-top: 24px;
-    padding-bottom: 15px;
+    padding-top: 27px;
+    padding-bottom: 9px;
 
     p {
       margin: 0 14px 5px 0;
@@ -111,13 +111,13 @@
       justify-content: flex-start;
       align-items: flex-start;
 
-      margin: 0 20px 10px 0;
+      margin: 0 20px 8px 0;
       padding: 0;
 
       @include font-main(18px, 26px, 400, $font-black);
 
       span {
-        margin-bottom: 10px;
+        margin-bottom: 9px;
       }
     }
   }
@@ -126,7 +126,11 @@
     @include font-main(18px, 22px, 600, $font-black);
   }
 
+  &__btn {
+    margin-bottom: 13px;
+  }
+
   &__raiting {
-     padding: 20px 0 31px;
+     padding: 41px 0 46px;
   }
 }

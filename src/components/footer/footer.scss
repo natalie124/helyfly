@@ -22,6 +22,7 @@
   &__logo {
     margin-top: 17.25px;
     margin-right: auto;
+    margin-left: 6%;
 
     transition-property: opacity;
     transition-duration: 0.3s;
@@ -45,8 +46,13 @@
     margin-right: 12.75px;
   }
 
+  &__lang {
+    margin-right: 5%;
+  }
+
   &__payment-icons {
     margin-right: 24.036%;
+    margin-left: 6%;
   }
 
   &__info {

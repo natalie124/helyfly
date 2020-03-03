@@ -1,7 +1,8 @@
 .raiting
   +img-svg("raiting", 32, 35.8, "Отзывы")
-  p.raiting__text Более <b>50</b> отзывов с оценкой
-  ul.raiting__stars
-    - for (var x = 0; x < 5; x++)
-      li
-        +svg("star", 18, 17)
+  .raiting__wrapper
+    p.raiting__text Более <b>50</b> отзывов с оценкой
+    ul.raiting__stars
+      - for (var x = 0; x < 5; x++)
+        li
+          +svg("star", 18, 17)

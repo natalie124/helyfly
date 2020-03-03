@@ -1,8 +1,12 @@
 .header {
   width: 100%;
-  padding: 38px 0;
+  padding: 28px 0 27px;
 
   background-color: $white;
+
+  @media (max-width: $laptop) {
+    padding: 20px 0;
+  }
 
   &__wrapper {
     display: flex;
@@ -13,6 +17,7 @@
 
   &__logo {
     margin-right: 36px;
+    margin-top: 6px;
 
     transition-property: opacity;
     transition-duration: 0.3s;

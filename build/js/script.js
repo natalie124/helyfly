@@ -1,28 +1,17 @@
 'use strict';
-(function() {
-  // проверяет наличие скроллбара
-  function getScrollBarWidth() {
-    var block = $('<div>').css({ 'height': '50px', 'width': '50px' }),
-      indicator = $('<div>').css({ 'height': '200px' });
-
-    $('body').append(block.append(indicator));
-    var w1 = $('div', block).innerWidth();
-    block.css('overflow-y', 'scroll');
-    var w2 = $('div', block).innerWidth();
-    $(block).remove();
-
-    return (w1 - w2);
+$(function() {
+  function ibg() {
+    $.each($('.ibg'), function(index, val) {
+      if ($(this).find('img').length > 0) {
+        $(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
+      }
+    });
   }
-  // добавляет для body класс 'scrollbar' если есть скроллбар
-  function checkScrollbar() {
-    var scrollWidth = getScrollBarWidth();
-    scrollWidth > 0 ? $('body').addClass('scrollbar') : $('body').removeClass('scrollbar');
-  }
-  checkScrollbar();
-})();
+  ibg();
+});
 
 'use strict'
-jQuery(function($){
+$(document).ready(function () {
   // маски для текстовых полей в форме
    $("#booking-date").mask("99.99.9999");
    $('#booking-tel').mask('+7 (999) 999-99-99');
@@ -32,7 +21,7 @@ jQuery(function($){
 });
 
 'use strict';
-(function() {
+$(document).ready(function () {
   var hideClass = 'js-hide';
   var scrollHiddenClass = 'scroll-hidden';
 
@@ -51,6 +40,24 @@ jQuery(function($){
     }
   ];
 
+  function checkScrollbar() {
+    function getScrollBarWidth() {
+      var block = $('<div>').css({ 'height': '50px', 'width': '50px' }),
+        indicator = $('<div>').css({ 'height': '200px' });
+
+      $('body').append(block.append(indicator));
+      var w1 = $('div', block).innerWidth();
+      block.css('overflow-y', 'scroll');
+      var w2 = $('div', block).innerWidth();
+      $(block).remove();
+
+      return (w1 - w2);
+    }
+
+    var scrollWidth = getScrollBarWidth();
+    scrollWidth > 0 ? $('body').addClass('scrollbar') : $('body').removeClass('scrollbar');
+  }
+
   function addInputFocus() {
     // добавляет фокус на первое поле
     var input = $('.modal').find('form input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]):not([type="file"]):not([type="image"])');
@@ -59,6 +66,7 @@ jQuery(function($){
   }
 
   function modalOpen(modalSelector) {
+    checkScrollbar();
     $('.modal').removeClass(hideClass);
     $('body').addClass(scrollHiddenClass);
     addInputFocus();
@@ -108,10 +116,10 @@ jQuery(function($){
 
   activateModalClose();
   activateModalOpen();
-})();
+});
 
 'use strict'
-$(document).ready(function () {
+$(function() {
 // показывает / скрывает элементы
   $('.js-show-container').each(function () {
     var btn = $(this).find('.js-show-btn'),    // кнопка показать еще

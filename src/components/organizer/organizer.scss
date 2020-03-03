@@ -1,5 +1,6 @@
 .organizer {
   width: 100%;
+  margin-bottom: 3.4%;
 
   &__wrapper {
     display: flex;
@@ -11,17 +12,21 @@
   &__info {
     max-width: 584px;
     width: 100%;
+
+    @media (max-width: $laptop) {
+      max-width: 100%;
+    }
   }
 
   &__title {
-    margin: 0 0 14px;
+    margin: 0 0 13px;
     padding: 0;
 
     @include font-main(18px, 26px, 500, $font-black);
   }
 
   &__text {
-    margin: 0 0 20px;
+    margin: 0 0 26px;
     padding: 0;
 
     @include font-main(16px, 24px, 400, $font-black);
@@ -29,7 +34,8 @@
 
   &__more {
     position: relative;
-    top: -15px;
+    top: -20px;
+    margin-bottom: 14px;
   }
 
   &__profile {
@@ -38,5 +44,15 @@
     justify-content: flex-start;
     align-items: center;
     flex-grow: 2;
+
+    padding-left: 3%;
+
+    @media (max-width: $laptop) {
+      width: 100%;
+      margin-bottom: 20px;
+      padding-left: 0;
+
+      order: -1;
+    }
   }
 }

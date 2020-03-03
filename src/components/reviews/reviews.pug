@@ -2,23 +2,41 @@ section.reviews
   .reviews__wrapper.container.js-show-container
     h3.reviews__main-title Отзывы:
     ul.reviews__list
-      each review in reviews
-        li.reviews__item.js-show-item
-          .reviews__photo
-            +img-jpg("" + review.photo, 101, 101, "" + review.title)
-          .reviews__info
-            h4.reviews__title !{review.title}
-            if review.category
-              p.reviews__categoty !{review.category}
-            .reviews__raiting.raiting
-              ul.raiting__stars
-                - for (var x = 0; x < 5; x++)
-                  li
-                    +svg("star", 18, 17)
-              p.raiting__check Супер! Я бы заказала съемку снова!
+      each review, index in reviews
+        if index < numberReviews
+          li.reviews__item.js-show-item
+            .reviews__photo
+              +picture-jpg-webp("" + review.photo, 101, 101, "" + review.title)
+            .reviews__info
+              h4.reviews__title !{review.title}
+              if review.category
+                p.reviews__category !{review.category}
+              .reviews__raiting.raiting
+                ul.raiting__stars
+                  - for (var x = 0; x < 5; x++)
+                    li
+                      +svg("star", 18, 17)
+                p.raiting__check Супер! Я бы заказала съемку снова!
 
-            p.reviews__text !{review.text}
-            span.reviews__date !{review.date}.
+              p.reviews__text !{review.text}
+              span.reviews__date !{review.date}.
+        else
+          li.reviews__item.js-show-item.js-hide
+            .reviews__photo
+              +picture-jpg-webp("" + review.photo, 101, 101, "" + review.title)
+            .reviews__info
+              h4.reviews__title !{review.title}
+              if review.category
+                p.reviews__category !{review.category}
+              .reviews__raiting.raiting
+                ul.raiting__stars
+                  - for (var x = 0; x < 5; x++)
+                    li
+                      +svg("star", 18, 17)
+                p.raiting__check Супер! Я бы заказала съемку снова!
+
+              p.reviews__text !{review.text}
+              span.reviews__date !{review.date}.
 
     .reviews__more
-        button.button-more.button-more--double-arrow.js-show-btn(type="button" data-count="3" data-text="Свернуть") Показать все <span class="js-show-all"></span>
+        button.button-more.button-more--double-arrow.js-show-btn(type="button" data-count="" + numberReviews data-text="Свернуть") Показать все <span class="js-show-all"></span>

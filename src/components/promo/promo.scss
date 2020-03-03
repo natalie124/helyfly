@@ -4,7 +4,7 @@
   width: 100%;
   min-height: 655px;
   padding-bottom: 43.75%;
-  margin-bottom: 70px;
+  margin-bottom: 3.6%;
 
   background-color: $promo-background;
 
@@ -44,15 +44,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
+    padding-top: 1.1%;
   }
 
   &__title {
     max-width: 890px;
     width: 100%;
-    margin: 0 0 25px;
+    margin: 0 0 19px;
     padding: 0;
 
     @include font-main(40px, 49px, 700, $white);
+
+    @media (max-width: $laptop) {
+      font-size: 35px;
+      line-height: 40px;
+
+      margin-bottom: 25px;
+    }
 
     b {
       font-weight: 700;

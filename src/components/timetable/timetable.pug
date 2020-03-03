@@ -1,31 +1,30 @@
 section.timetable
   .container
     table.timetable__table
-      tbody
-        caption
-          h3.timetable__title Доступная съемка в ближайшее время:
-        tr
-          th.timetable__date
-            p Пятница, <span>14</span> сентября
-            button.timetable__calendar(type="button" title="Открыть календарь")
-              +svg("calendar", 18, 18)
-        tr
-          td.timetable__item
-            p
-              span.timetable__time 15:00 &#8212; 18:00
-              span.timetable__price 1500<span>₽</span>
-              span.timetable__places Осталось <span>1 место</span>
+      caption
+        h3.timetable__title Доступная съемка в&nbsp;ближайшее время:
+      tr
+        th.timetable__date
+          p Пятница, <span>14</span> сентября
+          button.timetable__calendar(type="button" title="Открыть календарь")
+            +svg("calendar", 18, 18)
+      tr
+        td.timetable__item
+          p
+            span.timetable__time 15:00 - 18:00
+            span.timetable__price 1500<span>₽</span>
+            span.timetable__places Осталось &#8212; <span>1 место</span>
 
-            a.timetable__btn.button Выбрать
+          a.timetable__btn.button Выбрать
 
-        tr
-          td.timetable__item
-            p
-              span.timetable__time 19:00 &#8212; 22:00
-              span.timetable__price 1500<span>₽</span>
-              span.timetable__places Осталось <span>1 место</span>
+      tr
+        td.timetable__item
+          p
+            span.timetable__time 19:00 - 22:00
+            span.timetable__price 1500<span>₽</span>
+            span.timetable__places Осталось &#8212; <span>1 место</span>
 
-            a.timetable__btn.button Выбрать
-        tr
-          td.timetable__raiting
-            include ../blocks/raiting
+          a.timetable__btn.button Выбрать
+      tr
+        td.timetable__raiting
+          include ../blocks/raiting

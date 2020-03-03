@@ -3,9 +3,14 @@
     .gallery__wrapper.js-show-container
       h3.gallery__title Фотографии пакета:
       ul.gallery__list
-        each photo in photos
-          li.gallery__item.js-show-item
-            div.gallery__img
-              +img-jpg("" + photo, 277, 185)
+        each photo, index in photos
+          if index < numberPhotos
+            li.gallery__item.js-show-item
+              div.gallery__img
+                +picture-jpg-webp("" + photo, 277, 185)
+          else
+            li.gallery__item.js-show-item.js-hide
+              div.gallery__img
+                +picture-jpg-webp("" + photo, 277, 185)
       .gallery__more
-        button.button-more.button-more--double-arrow.js-show-btn(type="button" data-count="8" data-text="Свернуть") Показать еще
+        button.button-more.button-more--double-arrow.js-show-btn(type="button" data-count="" + numberPhotos data-text="Свернуть") Показать все фото

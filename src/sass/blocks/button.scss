@@ -1,6 +1,6 @@
 .button {
   margin: 0;
-  padding: 16px 32px;
+  padding: 15px 30px;
 
   @include font-main(14px, 17px, 500, $orange);
   text-decoration: none;
@@ -26,8 +26,16 @@
   }
 
   &--big {
-    padding: 23px 37px;
+    padding: 21px 39px;
+
     font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (max-width: $laptop) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &--white {
@@ -75,7 +83,7 @@
 .button-more {
   position: relative;
 
-  margin: 0 0 27px;
+  margin: 0 0 21px;
   padding: 0 22px 0 0;
 
   @include font-main(16px, 23px, 500, $font-blue);
@@ -110,6 +118,8 @@
 
   &--double-arrow {
     padding-left: 22px;
+
+    @include font-main(17px, 25px, 500, $font-blue);
 
     &::before {
       position: absolute;

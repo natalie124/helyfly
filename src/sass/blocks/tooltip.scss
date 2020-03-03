@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 
@@ -16,7 +16,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    padding: 11px 23px;
+    padding: 5px 24px;
 
     background-color: $orange;
     border-radius: 5px;
@@ -31,11 +31,20 @@
     margin: 0 7px 0 0;
     padding: 0;
 
-    @include font-main(20px, 43px, 400, $white);
+    @include font-main(20px, 30px, 400, $white);
+
+    @media (max-width: $laptop) {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__price {
     @include font-main(35px, 43px, 800, $white);
+
+    @media (max-width: $laptop) {
+      font-size: 30px;
+    }
   }
 
   &__icon {
@@ -55,10 +64,10 @@
   &::after {
     position: absolute;
     top: calc(100% - 15px);
-    left: 50%;
+    left: 55%;
 
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
 
     background-color: $orange;
     transform: rotate(45deg);
