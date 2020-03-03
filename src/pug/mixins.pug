@@ -13,5 +13,5 @@ mixin img-png( name, width, height, alt )
 
 mixin picture-jpg-webp( name, width, height, alt )
   picture
-    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name "@2x.webp 2x")
+    source(type="image/webp" srcset="img/webp/" + name + ".webp, img/webp/" + name + "@2x.webp 2x")
     img( src="img/" + name + ".jpg" srcset="img/" + name + "@2x.jpg 2x" width=("" + width) height=("" + height) alt="" + alt )

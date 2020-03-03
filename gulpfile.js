@@ -52,7 +52,7 @@ gulp.task('images', function() {
         quality: [0.7, 0.9]
       }),
       imagemin.optipng({
-        optimizationLevel: 3
+        optimizationLevel: 7
       }),
       imagemin.jpegtran({
         progressive: true
