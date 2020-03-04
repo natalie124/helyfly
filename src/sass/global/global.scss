@@ -25,20 +25,24 @@ img {
 }
 
 .ibg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
 }
 
 .ibg img {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .visually-hidden {

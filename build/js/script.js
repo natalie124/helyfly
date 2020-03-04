@@ -7,7 +7,13 @@ $(function() {
       }
     });
   }
+
+  /*@cc_on
+
   ibg();
+
+  @*/
+
 });
 
 'use strict'
