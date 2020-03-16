@@ -47,6 +47,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
+    width: 100%;
     padding-left: 121px;
 
     @media (max-width: $mobile) {
@@ -103,6 +104,7 @@
     }
   }
 
+
   &__content {
     width: 100%;
     padding-top: 10px;
@@ -116,14 +118,15 @@
   }
 
   &__raiting {
-    max-width: 125px;
-    width: 100%;
+    width: 125px;
     margin-bottom: 20px;
 
     @media (max-width: $mobile) {
       margin-top: 7px;
       margin-bottom: 31px;
       padding-left: 102px;
+
+      box-sizing: content-box;
     }
   }
 

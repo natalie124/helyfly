@@ -9,6 +9,7 @@
   }
 
   &__wrapper {
+    width: 100%;
     margin-bottom: 35px;
 
     border-bottom: 0.5px solid $grey;
@@ -49,6 +50,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
+    width: 100%;
     margin: 0 -5px 39px;
     padding: 0;
 
@@ -105,7 +107,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
 
-    width: 100%;
+    width: calc(100% - 54px);
     margin: 0 27px;
     padding-right: 6%;
 
